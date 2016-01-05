@@ -7,7 +7,7 @@ module OmniAuth
       option :name, "fablabs"
 
       option :client_options, {
-        :site => "https://fablabs.io"
+        :site => "https://api.fablabs.io"
         # :authorize_path => "/oauth/authorize"
       }
 
@@ -27,7 +27,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/api/v0/me.json').parsed
+        @raw_info ||= access_token.get('/v0/me.json').parsed
       end
     
     end
