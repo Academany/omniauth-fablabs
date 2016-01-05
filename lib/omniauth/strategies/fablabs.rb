@@ -7,8 +7,8 @@ module OmniAuth
       option :name, "fablabs"
 
       option :client_options, {
-        :site => "http://fablabs.io",
-        :authorize_url => "/oauth/authorize"
+        :site => "https://fablabs.io"
+        # :authorize_path => "/oauth/authorize"
       }
 
       uid { raw_info["id"] }
@@ -29,5 +29,7 @@ module OmniAuth
       def raw_info
         @raw_info ||= access_token.get('/api/v0/me.json').parsed
       end
+    
     end
   end
+end
