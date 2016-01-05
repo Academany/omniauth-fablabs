@@ -19,7 +19,7 @@ module OmniAuth
           :first_name => raw_info["user"]["first_name"],
           :last_name => raw_info["user"]["last_name"],
           :name => raw_info["user"]["username"],
-          :avatar => raw_info["user"]["avatar"],
+          :avatar => raw_info["user"]["avatar"]
           # and anything else you want to return to your API consumers
         }
       end
